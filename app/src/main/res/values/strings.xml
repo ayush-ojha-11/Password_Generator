@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Password Generator</string>
+    <string name="about_strongPassword">What makes a Strong Password?\nThe key aspects of a strong password are length (the longer the better); a mix of letters (upper and lower case), numbers, and symbols, no ties to your personal information, and no dictionary words.\n</string>
+    <string name="tips">Characteristics of strong passwords:\n\nAt least 8 characters—the more characters, the better.\n
+A mixture of both uppercase and lowercase letters.\n
+A mixture of letters and numbers.\n
+Inclusion of at least one special character, e.g., ! @ # ? ]\n
+Note: do not use &lt; or &gt; in your password, as both can cause problems in Web browsers.\nRemove the password from the clipboard, once you have used it for security reasons.</string>
+    <string name="about">This is a highly secure, random Password Generator application that generates random password and shows it\'s strength.\nNo permissions are required to use the app and no password is stored by the application.\n\n\u00a9 All rights reserved.\n\nBy: Ayush Ojha</string>
+</resources>

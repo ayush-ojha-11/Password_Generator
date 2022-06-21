@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_strongPassword"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        tools:ignore="HardcodedText" />
+
+    <CheckBox
+        android:id="@+id/checkBoxUpper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Include Uppercase Letters"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+
+        app:layout_constraintStart_toStartOf="@+id/textView"
+
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+    <CheckBox
+        android:id="@+id/checkBoxLower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Include Lowercase Letters"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxUpper"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxUpper"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxUpper"
+        tools:ignore="HardcodedText" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDigits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Include Digits"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxLower"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxLower"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxLower"
+        tools:ignore="HardcodedText" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSymbols"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Include Special Symbols"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxDigits"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxDigits"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxDigits"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="sans-serif-condensed"
+        android:scrollbars="vertical"
+        android:text="Password"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edit_query"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/edit_query"
+        app:layout_constraintTop_toBottomOf="@+id/edit_query"
+        tools:ignore="HardcodedText"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Generate"
+        app:layout_constraintEnd_toEndOf="@+id/password_text_strength"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/password_text_strength"
+        app:layout_constraintTop_toBottomOf="@+id/password_text_strength"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/edit_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Enter the Size of \nPassword"
+        android:inputType="numberSigned"
+        android:maxLength="5"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxSymbols"
+        app:layout_constraintHorizontal_bias="0.613"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxSymbols"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSymbols"
+        tools:ignore="Deprecated,HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCopy"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:srcCompat="@drawable/paste" />
+
+    <TextView
+        android:id="@+id/password_text_strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/password_text"
+        app:layout_constraintStart_toStartOf="@+id/password_text"
+        app:layout_constraintTop_toBottomOf="@+id/password_text"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
